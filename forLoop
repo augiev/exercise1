@@ -1,0 +1,32 @@
+import easygui as g
+
+#for loop  has a specific amount of time (conditions) that the code will run
+
+# for x in range(1,6): #if no starting number is stated, goes from 0 up to the number not including the number
+#     g.msgbox(f"I love python times {x}")
+
+#######
+
+# lst_num = []
+
+# for x in range(2,1001,2): #the third number is the step (in this case count by 2s)
+#     lst_num.append(x)
+
+# g.msgbox(lst_num)
+
+#######
+
+# lst_colors = [
+#     "red",
+#     "blue",
+#     "oragne",
+#     "black",
+#     "gray",
+#     "green",
+#     "pink"
+# ]
+
+# for color in lst_colors: #this will display the list of colors one by one
+#     g.msgbox(color)
+
+#######

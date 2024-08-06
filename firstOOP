@@ -1,0 +1,23 @@
+import easygui as g
+
+class Animal():
+    def __init__(self, animal_type, name, age, breed, size):
+        self.animal_type = animal_type
+        self.name = name
+        self.age = age
+        self.breed = breed
+        self.size = size
+        self.lst_of_options = ["Loves children", "Good with other pets","Loves snacks"
+                            ]
+cat = Animal("cat", "Heathcliff", 4, "Tabby", "large")
+dog = Animal("dog", "Koa", 3, "Welsh Springer Spaniel", "medium")
+cow = Animal("cow", "Milka", 6, "Dairy", "huge")
+
+lst_of_pets = [cat, dog, cow]
+
+for x in lst_of_pets:
+    message = f"""
+    The name of my {x.animal_type} is {x.name} and it is {x.age} years old.
+    It is a {x.size} {x.breed} and it {x.lst_of_options[0]}
+    """
+    g.msgbox(message)

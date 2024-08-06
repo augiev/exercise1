@@ -1,0 +1,17 @@
+
+import easygui as g
+
+lst_clr = ["Red", "Blue", "Pink"]
+
+clr = g.buttonbox(msg="Please choose one color", title="Color Choices", choices=(lst_clr))
+
+if clr == "Blue":
+    g.msgbox(f"Blue is my favorite color too!", title="Results")
+elif clr == "Red":
+    g.msgbox(f"Red is a nice color. My favorite is blue.", title="Results")
+elif clr == "Pink":
+    g.msgbox(f"Pink is a nice color. My favorite is blue.", title="Results")
+else:
+    g.msgbox("Please make a choice")
+
+

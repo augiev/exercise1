@@ -1,0 +1,48 @@
+import turtle
+import easygui as g
+
+pen = turtle.Turtle()
+
+def drawing():
+    pen.fd(100)
+
+def sqr(value):
+    for sides in range(4):  #by using the for loop, we don't have to program the other 3 lines commented out
+        pen.fd(value)
+        pen.left(90)
+
+    # pen.fd(150)
+    # pen.left(90)
+
+    # pen.fd(150)
+    # pen.left(90)
+
+    # pen.fd(150)
+    # pen.left(90)
+
+sqr(50)
+sqr(100)
+sqr(150)
+
+def shape(distance, num):
+    angle = 360/num
+    for x in range(num):
+        pen.fd(distance)
+        pen.left(angle)
+
+shape(200, 4)
+shape(50, 3)
+shape(100, 3)
+shape(150, 3)
+shape(200, 3)
+shape(50, 5)
+shape(100, 5)
+shape(150, 5)
+shape(200, 5)
+shape(50, 6)
+shape(100, 6)
+shape(150, 6)
+shape(200, 6)
+
+turtle.done()
+

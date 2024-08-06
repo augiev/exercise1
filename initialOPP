@@ -1,0 +1,13 @@
+class Car: #classes use CapitalizedWords notation by convention
+    def __init__(self, color, mileage): #this method is used to define the attributes all Dog objects should have
+        self.color = color #these are called instance attributes. class attributes apply to all instances in a class and are defined beneath the first line of the class name and is indented 4 spaces
+        self.mileage = mileage
+
+    def __str__(self): #this method interpolates both instance attributes into an f-sting using :, format specifier to show mileage in thousands with comma
+        return f"The {self.color} car has {self.mileage:,} miles"
+
+blue_car = Car("blue", 20000) #these are called Car instances. creating one is called instantiating.
+red_car = Car("red", 30000)
+
+for car in (blue_car, red_car):
+    print (car) #this prints the __str__ method f-string as opposed to the memory location because __str___ was defined

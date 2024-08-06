@@ -1,0 +1,25 @@
+import turtle
+
+class LovelyShapes():
+    def __init__(self, length, num):
+        self.length = length
+        self.num = num
+        self.pen = turtle.Turtle()
+        self.pen.speed(0)
+        self.angle = 360/self.num 
+
+    def shape(self):
+        for x in range(self.num):
+            self.pen.fd(self.length)
+            self.pen.left(self.angle)
+
+    def funnyshape(self):
+        for x in range(self.length):
+            for y in range(self.num):
+                self.pen.fd(x)
+                self.pen.left(self.angle)
+
+shp = LovelyShapes(10,3)
+shp.funnyshape()
+
+turtle.done()

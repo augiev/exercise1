@@ -1,0 +1,36 @@
+import easygui as g
+import random
+
+
+
+def main():
+
+    options = ["Rock","Paper","Scissors"]
+
+    cpu_choice = random.choice(options)
+
+    player_choice = g.buttonbox(msg="Please make a choice:", choices=options, title="Rock, Paper, Scissors")
+
+    if player_choice == cpu_choice:
+        g.msgbox(f"Computer chose {cpu_choice}. It's a draw", title="Results")
+    elif player_choice == "Rock" and cpu_choice == "Scissors":
+        g.msgbox(f"Computer chose {cpu_choice}. Rock beats Scissors, you win", title="Results")
+    elif player_choice == "Rock" and cpu_choice == "Paper":
+        g.msgbox(f"Computer chose {cpu_choice}. Paper beats Rock, you lose", title="Results")
+    elif player_choice == "Paper" and cpu_choice == "Scissors":
+        g.msgbox(f"Computer chose {cpu_choice}. Scissor beats Paper, you lose", title="Results")
+    elif player_choice == "Paper" and cpu_choice == "Rock":
+        g.msgbox(f"Computer chose {cpu_choice}. Paper beats Rock, you win", title="Results")
+    elif player_choice == "Scissors" and cpu_choice == "Rock":
+        g.msgbox(f"Computer chose {cpu_choice}. Rock beats Scissors, you lose", title="Results")
+    elif player_choice == "Scissors" and cpu_choice == "Paper":
+        g.msgbox(f"Computer chose {cpu_choice}. Scissors beats Paper, you win", title="Results")
+
+    replay = g.buttonbox("Would you like to play again?", title="Play Again?", choices=("Yes", "No"))
+
+    if replay == "Yes":
+        main()
+    else:
+        quit
+
+main()

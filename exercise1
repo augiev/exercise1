@@ -1,0 +1,16 @@
+import easygui as g
+
+name = g.enterbox("What is your name?")
+age = g.enterbox("How old are you?")
+location = g.enterbox("Where are you from?")
+sex = g.enterbox("Are you female or male?")
+children = g.enterbox("How many children do you have?")
+
+# g.msgbox(name+" is a "+age+" year old "+sex+" from "+location+" with "+children+" children.")
+
+answer = f"""
+{name} is a {age} year old {sex}
+from {location} with {children} children.
+"""
+
+g.msgbox(answer)
